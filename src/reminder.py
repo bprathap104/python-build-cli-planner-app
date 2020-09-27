@@ -6,10 +6,11 @@ class PrefixedReminder:
         self.prefix = prefix
         self.text = prefix + '<placeholder_text>'
 
+
 class PoliteReminder(PrefixedReminder):
     """This class acts is derived from base class PrefixedReminder
     """
     def __init__(self, text):
-        super().__init__()
-        self.prefix = "Please "
+        super().__init__('Please ')
         self.text   = self.prefix + text
+        
